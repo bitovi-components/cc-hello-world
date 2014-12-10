@@ -4,7 +4,7 @@ This is a simple example component. This is the documentation.
 
 ## Installation
 
-`bower install --save canjs/cc-hello-world`
+`bower install --save bitovi/cc-hello-world`
 
 ## Usage
 
@@ -46,3 +46,11 @@ In your template:
 * `npm install`
 * `grunt serve [--port PORT=8125]`
 * Go to [demo page](http://localhost:8125)
+
+## Testing
+
+* `npm install`
+* `grunt test`
+
+You can run the test server and visit `/test.html` to run the tests in the
+browser, as well. Tests currently use mocha.
