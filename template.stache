@@ -1,0 +1,4 @@
+<h1>{{greeting}} {{target}}{{#if excited}}!!!{{else}}!{{/if}}</h1>
+<div class="cc-hello-world-content">
+  <content></content>
+</div>

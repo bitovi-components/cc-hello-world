@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>cc-hello-world demo</title>
+    </head>
+    <body>
+        <script src="bower_components/traceur/traceur.js"></script>
+        <script src="bower_components/steal/steal.js"
+                config-path="stealconfig.js">
+        </script>
+        <script type="text/stache" id="demo-template">
+            <ul>
+                <li>
+                    <cc-hello-world></cc-hello-world>
+                <li>
+                    <cc-hello-world target="Bitovi" excited></cc-hello-world>
+                <li>
+                    <cc-hello-world target="{target}">
+                        Name: <input can-value="{target}">
+                    </cc-hello-world>
+            </ul>
+        </script>
+        <script>
+            System.import("./demo");
+        </script>
+    </body>
+</html>
