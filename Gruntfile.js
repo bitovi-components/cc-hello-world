@@ -58,17 +58,13 @@ module.exports = function(grunt) {
 					port: grunt.option("port") || 8125,
 					debug: true
 				}
-			},
-			test: {
-				options: {
-					hostname: "localhost",
-					port: 3996,
-					debug: false
-				}
 			}
 		},
 		testee: {
-			phantom: ["test.html"]
+			options: {
+				browsers: ['firefox']
+			},
+			firefox: ["test.html"]
 		}
 	});
 	grunt.registerTask("build", [
@@ -79,7 +75,6 @@ module.exports = function(grunt) {
 	]);
 	grunt.registerTask("test", [
 		"stealBuild:test",
-		"connect:test",
 		"testee"
 	]);
 	grunt.registerTask("serve", ["connect:server:keepalive"]);

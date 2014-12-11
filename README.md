@@ -1,5 +1,7 @@
 # <cc-hello-world>
 
+[![Build Status](https://travis-ci.org/bitovi-components/cc-hello-world.svg)](https://travis-ci.org/bitovi-components/cc-hello-world)
+
 This is a simple example component. This is the documentation.
 
 ## Installation
