@@ -1,4 +1,5 @@
 System.config({
+	baseURL: "./",
 	map: {
 		"jquery/jquery": "jquery",
 		"can/util/util.js": "can/util/jquery/jquery.js"
@@ -8,6 +9,9 @@ System.config({
 		"can/*": "bower_components/canjs/*.js",
 		can: "bower_components/canjs/can.js"
 	},
+    meta: {
+        jquery: { exports: "jQuery" }
+    },
 	ext: {
 		less: "bower_components/steal/less",
 		stache: "can/view/stache/system"

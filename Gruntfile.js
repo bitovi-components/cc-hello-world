@@ -5,7 +5,20 @@ module.exports = function(grunt) {
 	grunt.config.init({
 		pkg: grunt.file.readJSON("package.json"),
 		stealBuild: {
-			default: {
+			demo: {
+				options: {
+					system: {
+						config: __dirname + "/stealconfig.js",
+						main: "demo",
+						bundlesPath: "./dist/"
+					},
+					buildOptions: {
+						minify: true,
+						bundleSteal: !grunt.option("standalone")
+					}
+				}
+			},
+			component: {
 				options: {
 					system: {
 						config: __dirname + "/stealconfig.js",
@@ -14,7 +27,7 @@ module.exports = function(grunt) {
 					},
 					buildOptions: {
 						minify: true,
-						bundlesteal: grunt.option("standalone")
+						bundleSteal: false
 					}
 				}
 			}
@@ -31,7 +44,7 @@ module.exports = function(grunt) {
 				options: {
 					hostname: "localhost",
 					port: 3996,
-					debug: true
+					debug: false
 				}
 			}
 		},
@@ -39,6 +52,7 @@ module.exports = function(grunt) {
 			phantom: ["test.html"]
 		}
 	});
+	grunt.registerTask("build", ["stealBuild:demo", "stealBuild:component"]);
 	grunt.registerTask("test", ["connect:test", "testee:phantom"]);
 	grunt.registerTask("serve", ["connect:server:keepalive"]);
 };
