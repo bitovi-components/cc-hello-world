@@ -5,4 +5,3 @@ import autoload from "util/template-autoloader";
 import "cc-hello-world";
 
 autoload();
-
