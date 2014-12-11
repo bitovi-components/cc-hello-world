@@ -1,5 +1,5 @@
 // Libraries
-import autoload from "util/template-autoloader";
+import autoload from "util/autoloader";
 
 // Components
 import "cc-hello-world";
