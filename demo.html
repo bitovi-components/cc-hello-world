@@ -4,24 +4,13 @@
         <title>cc-hello-world demo</title>
     </head>
     <body>
+        <cc-hello-world-demo></cc-hello-world-demo>
         <script src="bower_components/steal/steal.js"
                 config-path="stealconfig.js">
         </script>
-        <script type="text/stache" id="demo-template">
-            <ul>
-                <li>
-                    <cc-hello-world></cc-hello-world>
-                <li>
-                    <cc-hello-world target="Bitovi" excited></cc-hello-world>
-                <li>
-                    <cc-hello-world target="{target}">
-                        Name: <input can-value="{target}">
-                    </cc-hello-world>
-            </ul>
-        </script>
         <script>
-            if (window.System) {
-              System.import("./demo");
+            if (false && window.System) {
+              System.import("./demo/demo");
             } else {
               var link = document.createElement("link");
               link.href = "dist/demo.css";
