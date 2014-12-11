@@ -32,6 +32,12 @@ module.exports = function(grunt) {
 				}
 			}
 		},
+		copy: {
+			demoLoader: {
+				src: "./bower_components/component-utils/demo-loader.js",
+				dest: "./dist/demo-loader.js"
+			}
+		},
 		connect: {
 			server: {
 				options: {
@@ -52,7 +58,11 @@ module.exports = function(grunt) {
 			phantom: ["test.html"]
 		}
 	});
-	grunt.registerTask("build", ["stealBuild:demo", "stealBuild:component"]);
+	grunt.registerTask("build", [
+		"copy:demoLoader",
+		"stealBuild:demo",
+		"stealBuild:component"
+	]);
 	grunt.registerTask("test", ["connect:test", "testee:phantom"]);
 	grunt.registerTask("serve", ["connect:server:keepalive"]);
 };

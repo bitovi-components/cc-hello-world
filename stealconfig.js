@@ -2,7 +2,8 @@ System.config({
 	baseURL: "./",
 	map: {
 		"jquery/jquery": "jquery",
-		"can/util/util.js": "can/util/jquery/jquery.js"
+		"can/util/util.js": "can/util/jquery/jquery.js",
+		util: "bower_components/component-utils"
 	},
 	paths: {
 		jquery: "bower_components/jquery/dist/jquery.js",
