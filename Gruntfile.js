@@ -18,6 +18,19 @@ module.exports = function(grunt) {
 					}
 				}
 			},
+			test: {
+				options: {
+					system: {
+						config: __dirname + "/stealconfig.js",
+						main: "test/test",
+						bundlesPath: "./dist/"
+					},
+					buildOptions: {
+						minify: false,
+						bundleSteal: true
+					}
+				}
+			},
 			component: {
 				options: {
 					system: {
@@ -61,8 +74,13 @@ module.exports = function(grunt) {
 	grunt.registerTask("build", [
 		"copy:demoLoader",
 		"stealBuild:demo",
+		"stealBuild:test",
 		"stealBuild:component"
 	]);
-	grunt.registerTask("test", ["connect:test", "testee:phantom"]);
+	grunt.registerTask("test", [
+		"stealBuild:test",
+		"connect:test",
+		"testee"
+	]);
 	grunt.registerTask("serve", ["connect:server:keepalive"]);
 };
