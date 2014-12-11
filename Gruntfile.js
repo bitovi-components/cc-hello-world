@@ -9,7 +9,7 @@ module.exports = function(grunt) {
 				options: {
 					system: {
 						config: __dirname + "/stealconfig.js",
-						main: "demo",
+						main: "demo/demo",
 						bundlesPath: "./dist/"
 					},
 					buildOptions: {
