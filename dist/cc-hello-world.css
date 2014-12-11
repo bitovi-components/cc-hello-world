@@ -1,2 +1,2 @@
 /*styles.less!bower_components/steal/less*/
-cc-hello-world>h1{background-color:#ff69b4;color:orange;text-weight:bold}cc-hello-world .cc-hello-world-content{background-color:orange;color:#ff69b4}
+cc-hello-world{display:block}cc-hello-world>h1{background-color:#ff69b4;color:orange;text-weight:bold}cc-hello-world .cc-hello-world-content{background-color:orange;color:#ff69b4}

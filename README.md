@@ -4,7 +4,7 @@ This is a simple example component. This is the documentation.
 
 ## Installation
 
-`bower install --save bitovi/cc-hello-world`
+`bower install --save bitovi-components/cc-hello-world`
 
 ## Usage
 
@@ -38,14 +38,14 @@ In your template:
 
 ### Content
 
-* `select=""` - Inserted under the greeting. Background color and styles
+* `select="*"` - Inserted under the greeting. Background color and styles
   changed.
 
 ## Developing
 
 * `npm install`
 * `grunt serve [--port PORT=8125]`
-* Go to [demo page](http://localhost:8125)
+* Go to [demo page](http://localhost:8125/demo.html)
 
 ## Testing
 

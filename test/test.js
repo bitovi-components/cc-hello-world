@@ -1,4 +1,5 @@
 import can from "can";
+import "util/test-helper";
 
 // Install and import your preferred assertion library here.
 // import "assert";
