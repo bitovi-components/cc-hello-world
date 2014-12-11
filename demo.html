@@ -22,33 +22,6 @@
                 Do something boring
             </button>
         </script>
-
-        <!--
-
-            This demo works fine when the source code is distributed
-            without bower_components/ installed (for example, the component
-            index iframes). If we fail to load steal here, we simply fall
-            back to the committed distributed version, which works
-            standalone.
-
-            A real application would directly load things one way or the
-            other, depending on the environment.
-
-          -->
-        <script src="bower_components/steal/steal.js"
-                config-path="stealconfig.js">
-        </script>
-        <script>
-            if (window.System) {
-              System.import("demo/demo");
-            } else {
-              var link = document.createElement("link");
-              link.href = "dist/demo.css";
-              document.body.appendChild(link);
-              var script = document.createElement("script");
-              script.src = "dist/demo.js"
-              document.body.appendChild(script);
-            }
-        </script>
+        <script src="util/demo-loader.js"></script>
     </body>
 </html>
