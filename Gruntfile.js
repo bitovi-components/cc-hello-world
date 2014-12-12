@@ -21,9 +21,8 @@ module.exports = function(grunt) {
 			component: {
 				options: {
 					system: {
-						config: __dirname + "/stealconfig.js",
-						main: "cc-hello-world",
-						bundlesPath: "./dist/"
+						config: __dirname + "/bower.json",
+						main: "cc-hello-world"
 					},
 					buildOptions: {
 						minify: true,
