@@ -10775,7 +10775,7 @@ define('can/view/bindings/bindings', [
                     var arg;
                     for (var i = attrInfo.args.length - 1; i >= 0; i--) {
                         arg = attrInfo.args[i];
-                        if (arg.get) {
+                        if (arg && arg.hasOwnProperty('get')) {
                             args.unshift(data.scope.read(arg.get, { isArgument: true }).value);
                         } else {
                             args.unshift(arg);
