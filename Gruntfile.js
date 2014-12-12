@@ -61,10 +61,12 @@ module.exports = function(grunt) {
 			}
 		},
 		testee: {
-			options: {
-				browsers: ['firefox']
-			},
-			firefox: ["test.html"]
+			firefox: {
+				options: {
+					browsers: ["firefox"]
+				},
+				src: ["test.html"]
+			}
 		}
 	});
 	grunt.registerTask("build", [
