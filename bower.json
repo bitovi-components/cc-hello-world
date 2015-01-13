@@ -17,10 +17,20 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "canjs": "gthrive/canjs#gthrive",
+    "canjs": "bitovi/canjs#minor",
     "component-utils": "bitovi-components/component-utils",
-    "steal": "bitovi/steal#minor",
+    "steal": "bitovi/steal#master",
     "jquery": "~2.1.1",
     "mocha": "~2.0.1"
+  },
+  "system": {
+    "map": {
+      "util": "component-utils"
+    },
+    "meta": {
+      "jquery": {
+        "format": "global"
+      }
+    }
   }
 }
