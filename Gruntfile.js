@@ -18,6 +18,19 @@ module.exports = function(grunt) {
 					}
 				}
 			},
+			test: {
+				options: {
+					system: {
+						config: __dirname + "/stealconfig.js",
+						main: "test/test",
+						bundlesPath: "./dist/"
+					},
+					buildOptions: {
+						minify: false,
+						bundleSteal: true
+					}
+				}
+			},
 			component: {
 				options: {
 					system: {
@@ -45,24 +58,26 @@ module.exports = function(grunt) {
 					port: grunt.option("port") || 8125,
 					debug: true
 				}
-			},
-			test: {
-				options: {
-					hostname: "localhost",
-					port: 3996,
-					debug: false
-				}
 			}
 		},
 		testee: {
-			phantom: ["test.html"]
+			firefox: {
+				options: {
+					browsers: ["firefox"]
+				},
+				src: ["test.html"]
+			}
 		}
 	});
 	grunt.registerTask("build", [
 		"copy:demoLoader",
 		"stealBuild:demo",
+		"stealBuild:test",
 		"stealBuild:component"
 	]);
-	grunt.registerTask("test", ["connect:test", "testee:phantom"]);
+	grunt.registerTask("test", [
+		"stealBuild:test",
+		"testee"
+	]);
 	grunt.registerTask("serve", ["connect:server:keepalive"]);
 };
